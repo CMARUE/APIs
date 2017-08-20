@@ -1,0 +1,222 @@
+﻿libact,codact
+Locaux Vacants,AA101
+Locaux en travaux,AA102
+Commerce de gros alimentaire,AB101
+Commerce de gros fabrication textile,AB102
+Commerce de gros fabrication habillement,AB103
+Commerce de gros maroquinerie et chaussures,AB104
+Commerce de gros bijouterie,AB105
+Autre commerce de gros,AB106
+Imprimerie,AC101
+Services annexes aux entreprises,AC102
+Studio de reportages photographiques,AC103
+Cabinet médical,AD101
+Centre de radiologie,AD102
+Cabinet dentaire,AD103
+Cabinet de kinésithérapeute,AD104
+Cabinet d'infirmière,AD105
+Autre activité d'auxiliaire médical - Orthophoniste,AD106
+Ambulances,AD107
+Laboratoire d'analyses médicales,AD108
+Vétérinaire,AD109
+Théâtre,AE101
+Salle de concert,AE102
+Autre lieu de spectacle,AE103
+Atelier en boutique,AF101
+Bureau en boutique,AF102
+Equipement en boutique,AF103
+Stockage en boutique,AF104
+Charcuterie - Traiteur - Epicerie fine,CA101
+Traiteur asiatique,CA102
+Boulangerie - Boulangerie Pâtisserie,CA103
+Pâtisserie,CA104
+Chocolaterie - Confiserie,CA105
+Torréfacteur -  Commerce détail  thé et café,CA106
+Vente de produits surgelés,CA107
+Vente de fruits et légumes,CA108
+Boucherie - Boucherie-Charcuterie,CA109
+Poissonnerie,CA110
+Commerce détail de boissons,CA111
+Crèmerie - Fromagerie,CA112
+Glacier : vente à emporter et consommation sur place,CA113
+Produits alimentaires spécialisés régionaux et étrangers,CA114
+Produits alimentaires bio et nature,CA115
+Monoprix,CA201
+Supermarché classique,CA202
+Supermarché discount,CA203
+Supermarché spécialisé,CA204
+Alimentation générale de luxe > 300 m²,CA205
+Hypermarché,CA206
+Alimentation générale  <120m²,CA301
+Supérette  classique,CA302
+Supérette  discount,CA303
+Supérette  spécialisée,CA304
+Haute couture - Créateurs,CB101
+Tailleur sur mesure,CB102
+Vente et fabrication de tenues de mariées,CB103
+Prêt-à-porter Femme,CB104
+Prêt-à-porter Homme,CB105
+Prêt-à-porter Enfant,CB106
+Prêt-à-porter Mixte,CB107
+Prêt-à-porter Lingerie,CB108
+Friperie - Solderie - Dépôt-vente de vêtements,CB109
+Puériculture,CB110
+Sport - Habillement et chaussures,CB111
+Chaussures Femme,CB201
+Chaussures Homme,CB202
+Chaussures Enfant,CB203
+Chaussures Mixte,CB204
+Maroquinerie - Articles de voyages,CB205
+Joaillerie,CB301
+Horlogerie - Bijouterie,CB302
+Montres,CB303
+Bijouterie fantaisie - Accessoire de mode,CB304
+Pharmacie,CC101
+Vente articles médicaux - Prothèses et semelles orthopédiques,CC102
+Vente de prothèses auditives,CC103
+Parapharmacie,CC201
+Parfumerie - Produits de beauté,CC202
+Opticien,CC301
+Vente de meubles et multispécialistes,CD101
+Vente de meubles de cuisines et salle de bain,CD102
+Vente de meubles salon et chambre,CD103
+Equipement du foyer généraliste,CD201
+Linge de maison,CD202
+Tissus - Textile - Mercerie,CD203
+Vente de luminaires,CD204
+Vente de vaisselle - Ustensiles ménagers - Art de la table,CD205
+Spécialiste électroménager,CD301
+Spécialiste Radio - TV - Hi-Fi,CD302
+Généraliste électroménager - Radio - TV - Hi-Fi,CD303
+Antiquités,CD401
+Salle des ventes,CD402
+Brocante - Dépôt-vente - Biens d'occasion,CD403
+Bazar,CD501
+Librairie,CE101
+Papeterie - Fournitures de bureau,CE102
+Vente de journaux,CE103
+Kiosque à journaux,CE104
+Matériels d'arts graphiques - Loisirs créatifs,CE105
+Généraliste Sport,CE201
+Spécialiste d'un sport,CE202
+"Vente, réparation, location de vélos / vélos électriques",CE203
+Vente de monnaies et médailles,CE301
+Galerie d'art,CE302
+Philatélie,CE303
+Vente de livres anciens - Autographes,CE304
+Fabrication et vente d'instruments de musique,CE401
+Téléphonie (Grands opérateurs + revendeurs),CE402
+Téléphonie discount (pas d'enseigne particulière),CE403
+Vente de jeux vidéo (+ salle de jeux vidéos),CE404
+"Vente de disques, cassettes, CD, DVD",CE405
+Vente d'appareils photos,CE406
+Vente de matériel informatique,CE407
+Tabac,CE501
+Vente d'articles érotiques et sex-shop,CE502
+Vente de jouets et jeux,CE503
+Bimbeloterie - Articles souvenirs,CE504
+Vente d'articles religieux,CE505
+Vente d'animaux de compagnie,CE506
+Jeux de hasard et d'argent,CE507
+Vente de cigarettes électroniques,CE508
+Grand multispécialiste culturel,CE601
+Quincaillerie et droguerie,CF101
+Bricolage,CF102
+Revêtements sols et murs,CF103
+Fleuriste,CF201
+Jardinerie - Pépiniériste,CF202
+Concessionnaire automobiles,CG101
+Concessionnaire Auto + Essence,CG102
+Concessionnaire Auto + Garage,CG103
+Concessionnaire Auto + Essence + Garage,CG104
+Concessionnaire motos,CG105
+Concession + Réparation de motos,CG106
+Garage,CG201
+Garage + Vente essence,CG202
+Vente équipements automobiles,CG203
+Réparation de motos,CG204
+Station service,CG205
+Contrôle technique automobile,CG206
+Location de véhicules automobiles,CG301
+Restaurant traditionnel français,CH101
+Restaurant antillais,CH102
+Restaurant asiatique,CH103
+Restaurant maghrébin,CH104
+Restaurant africain,CH105
+Restaurant européen,CH106
+Restaurant central et sud américain,CH107
+"Restaurant indien, pakistanais et Moyen Orient",CH108
+Autre restaurant du monde,CH109
+Brasserie - Restauration continue sans tabac,CH201
+Brasserie - Restauration continue avec tabac,CH202
+Cafétéria,CH301
+Restauration rapide debout,CH302
+Restauration rapide assise,CH303
+Salon de thé,CH401
+Café - Tabac,CH402
+Bar ou Café sans tabac,CH403
+Cabaret - Diner-Spectacle,CH501
+Livraison à domicile plats alimentaires,CH502
+Hôtel de tourisme sans étoile,CI101
+Hôtel de tourisme avec 1 étoile,CI102
+Hôtel de tourisme avec 2 étoiles,CI103
+Hôtel de tourisme avec 3 étoiles,CI104
+Hôtel de tourisme avec 4 étoiles,CI105
+Hôtel de tourisme avec 5 étoiles,CI106
+Hôtel de tourisme - Palace,CI107
+"Location d'appartements (Appart Hotel, Citadines…)",CI108
+Hôtel de préfecture,CI201
+Auberge de jeunesse,CI301
+Grand magasin,GM101
+"Cordonnerie - Réparation ""minute"" (clés, talons…)",SA101
+Retouches de vêtements,SA102
+Location de costumes ou accessoires - Loisirs,SA103
+Blanchisserie - Pressing,SA104
+Laverie automatique,SA105
+Coiffure,SA201
+Institut de beauté - Activités thermales et thalasso,SA202
+Onglerie,SA203
+Salon de bronzage - Solaire / UV,SA204
+Salon de massage,SA205
+Bars à sourire,SA206
+Tatouage - Piercing,SA207
+Encadrement - Vente de tableaux - Posters,SA301
+"Artisanat de l'ameublement (tapissier, ébéniste…)",SA302
+"Travaux généraux du bâtiment (électricité, plomberie, peinture, isolation…)",SA303
+Menuiserie - Vitrerie - Miroiterie,SA304
+Serrurerie,SA305
+Réparation d'articles électriques ou électroniques,SA306
+Location de matériel de bricolage et équipement de la maison,SA307
+"Vidéo Club (Location de cassettes, DVD)",SA401
+Billetterie - Réservation spectacles,SA403
+Discothèque et club privé,SA404
+Salle multisports,SA405
+Salle de sport  spécialisée,SA406
+Salle ou club de jeux,SA407
+Cinéma,SA408
+Photocopies,SA501
+Gravure,SA502
+Reliure et finition,SA503
+Déménagement / Garde meuble,SA504
+Agence voyage-tourisme - Compagnies aériennes,SA505
+Agence Pôle emploi,SA506
+Agence d'intérim,SA507
+Développement rapide - Vente pellicule photo,SA508
+Ecole de conduite,SA509
+Pompes funèbres,SA510
+Toilettage et équipements pour animaux,SA511
+Libre service informatique - Cybercafé,SA512
+Cours scolaires/parascolaires (Acadomia…),SA513
+"Cours formation professionnelle (langues, informatique…)",SA514
+"Cours activités culturelles et de loisirs (poterie, danse…)",SA515
+"Services à la personne (nettoyage, aide personnes âgées…)",SA516
+Agence immobilière,SB101
+Banque - Caisse d'épargne,SB201
+Distributeur automatique de billets (non lié à une banque),SB202
+Assurances,SB203
+Bureau de change,SB204
+Achat - Vente d'or,SB205
+Bureau de poste,SB301
+Courses et courrier express,SB302
+Télécommunication en boutique,SB303
+NA,NA
