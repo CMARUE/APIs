@@ -36,7 +36,7 @@ m_protected_internal <- memoise(protected_internal, cache = fc)
 
 #* @get /protected
 protected <- function(adresse) {
-   m_protected_internal(adresse)
+  m_protected_internal(adresse)
 }
 
 
