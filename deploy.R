@@ -17,4 +17,4 @@ library(analogsea)
 # mydrop %>% install_r_package("geojsonio")
 
 mydrop <- droplet("59340474")
-mydrop %>% do_deploy_api("cmarue", "./", port = 8001)
+mydrop %>% plumber::do_deploy_api("cmarue", "./", port = 8001)
