@@ -43,7 +43,6 @@ protected_internal <- function(adresse) {
 
 m_protected_internal <- memoise(protected_internal, cache = fc)
 
-#* @preempt cors
 #* @get /protected
 protected <- function(adresse) {
   m_protected_internal(adresse)
@@ -85,7 +84,6 @@ bdcom_internal <- function(adresse, rayon, commerce) {
 
 m_bdcom_internal <- memoise(bdcom_internal)
 
-#* @preempt cors
 #* @get /bdcom
 bdcom <- function(adresse, rayon, commerce) {
   m_bdcom_internal(adresse, rayon, commerce)
