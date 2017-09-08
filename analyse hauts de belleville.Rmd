@@ -1,0 +1,39 @@
+---
+title: "Hauts de Belleville"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Desserte commerciale du quartier des hauts de Belleville
+
+Étapes :
+
+- [ ] Faire une ACM des types de commerce (par iris)
+- [ ] Régresser les premiers axes par variables sociodémo
+- [ ] Analyser les résidus des Hauts de Belleville (considéré comme un individu supplémentaire)
+- [ ] APIfier le modèle
+
+# ACM des types de commerce
+
+```{r load_data}
+library(geojsonio)
+library(sf)
+library(tidyverse)
+BDCOM <- geojson_read("./BDCOM/commercesparis.geojson", method = "local", what = "sp")
+BDCOM <- st_as_sf(BDCOM)
+BDCOM <- st_transform(BDCOM, st_crs(2154))
+BDCOM <- BDCOM %>% 
+  mutate_at(vars(libelle_voie, let, type_voie), funs(toupper(as.character(.)))) %>% 
+  mutate_at(vars(libact, codact), funs(as.character(.)))
+
+# IRIS Paris
+
+load("./IRIS/IRISCONTOURS-IRIS75.Rdata")
+
+iris <- st_as_sf(`IRISCONTOURS-IRIS75`)
+
+bdcom <- bdcom %>% 
+  mutate(iris = st_within(bdcom, iris, ))
+```
+
