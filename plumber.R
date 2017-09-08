@@ -23,6 +23,9 @@ protected_internal <- function(adresse) {
     arrange(desc(importance)) %>% 
     slice(1) %>% 
     select(latitude, longitude)
+  if (nrow(tmp_df) %in% 0) {
+    return("Cette adresse ne figure pas dans le PLU")
+  }
   coordinates(tmp_df) <- c("longitude", "latitude")
   proj4string(tmp_df) <- st_crs(4326)$proj4string
   tmp_df <- st_as_sf(tmp_df)
