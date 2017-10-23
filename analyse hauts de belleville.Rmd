@@ -27,13 +27,65 @@ BDCOM <- BDCOM %>%
   mutate_at(vars(libelle_voie, let, type_voie), funs(toupper(as.character(.)))) %>% 
   mutate_at(vars(libact, codact), funs(as.character(.)))
 
-# IRIS Paris
+tableau <- BDCOM %>% 
+  st_set_geometry(NULL) %>% 
+  mutate(iris = as.character(iris)) %>% 
+  group_by(iris, libact) %>% 
+  summarise(n = n()) %>% 
+  tidyr::spread(key = libact, value = n, fill = 0) %>% 
+  remove_rownames() %>% 
+  filter(!is.na(iris))
 
-load("./IRIS/IRISCONTOURS-IRIS75.Rdata")
+library(FactoMineR)
 
-iris <- st_as_sf(`IRISCONTOURS-IRIS75`)
+acp <- PCA(tableau[,-1], graph = FALSE)
 
-bdcom <- bdcom %>% 
-  mutate(iris = st_within(bdcom, iris, ))
+rownames(acp$ind$coord) <- as.character(tableau$iris)
+rownames(acp$ind$contrib) <- as.character(tableau$iris)
+rownames(acp$ind$cos2) <- as.character(tableau$iris)
+
+library(explor)
+
+explor(acp)
+
+```
+
+L'espace des commerces parisiens est structuré par de nombreux axes, dont les trois premiers portent l'information la plus importante.
+
+## Un axe "taille" : la densité commerciale
+
+Assez classiquement, la première composante principale porte sur la densité commerciale. Avec les opticiens, la restauration pèse en particulier très fortement sur cette dimension. 
+
+```{r}
+res <- explor::prepare_results(acp)
+explor::PCA_var_plot(res, xax = 1, yax = 2,
+    var_sup = FALSE, var_lab_min_contrib = 2,
+    col_var = NULL, labels_size = 10, scale_unit = TRUE,
+    transitions = TRUE, labels_positions = NULL,
+    xlim = c(-0.221, 0.91), ylim = c(-0.526, 0.605))
+```
+
+```{r}
+library(leaflet)
+
+pal <- ~colorQuantile("RdBu", `Dim.1`)
+
+left_join(
+  iris,
+  acp$ind$coord %>% 
+    as.data.frame() %>% 
+    rownames_to_column("iris"),
+  by = c("DCOMIRIS" = "iris")
+) %>% 
+  st_transform(4326) %>% 
+  leaflet() %>% 
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addPolygons(opacity = 0.1,
+              color = "black",
+              weight = 1,
+              fillColor = ~pal(`Dim.1`)) %>% 
+  addLegend(pal = pal)
+  
+
 ```
 
