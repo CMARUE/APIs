@@ -88,6 +88,6 @@ bdcom_internal <- function(adresse, rayon, commerce) {
 m_bdcom_internal <- memoise(bdcom_internal)
 
 #* @get /bdcom
-bdcom <- function(adresse, rayon, commerce) {
+bdcom <- function(adresse, rayon = 200, commerce) {
   m_bdcom_internal(adresse, rayon, commerce)
 }
