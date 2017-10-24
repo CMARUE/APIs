@@ -18,7 +18,7 @@ cors <- function(res) {
 
 
 protected_internal <- function(adresse) {
-  tmp_df <- geocode(paste(adresse, "75019 Paris")) %>% 
+  tmp_df <- geocode(adresse) %>% 
     filter(type %in% "housenumber") %>% 
     arrange(desc(importance)) %>% 
     slice(1) %>% 
@@ -64,7 +64,7 @@ BDCOM <- BDCOM %>%
 
 
 bdcom_internal <- function(adresse, rayon, commerce) {
-  tmp_df <- geocode(paste(adresse, "75019 Paris")) %>% 
+  tmp_df <- geocode(adresse) %>% 
     filter(type %in% "housenumber") %>% 
     arrange(desc(importance)) %>% 
     slice(1) %>% 
@@ -83,6 +83,8 @@ bdcom_internal <- function(adresse, rayon, commerce) {
     group_by(codact) %>% 
     summarise(n = n())
 }
+
+
 
 m_bdcom_internal <- memoise(bdcom_internal)
 
