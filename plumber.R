@@ -3,7 +3,7 @@ library(banR)
 library(sp)
 library(memoise)
 library(tidyverse)
-PLU <- read_sf("./PLU/PLU_PSMV_PROTCOM.shp")
+PLU <- read_sf("./PLU/PLU_PSMV_PROTCOM.shp", stringsAsFactors = FALSE)
 
 fc <- cache_filesystem("~/.Rcache")
 m_geocode <- memoise(geocode, cache = fc)
@@ -56,12 +56,11 @@ protected <- function(adresse) {
 
 
 library(geojsonio)
-BDCOM <- geojson_read("./BDCOM/commercesparis.geojson", method = "local", what = "sp")
+BDCOM <- geojson_read("./BDCOM/commercesparis.geojson", method = "local", what = "sp", stringsAsFactors = FALSE)
 BDCOM <- st_as_sf(BDCOM)
 BDCOM <- st_transform(BDCOM, st_crs(2154))
 BDCOM <- BDCOM %>% 
-  mutate_at(vars(libelle_voie, let, type_voie), funs(toupper(as.character(.)))) %>% 
-  mutate_at(vars(libact, codact), funs(as.character(.)))
+  mutate_at(vars(libelle_voie, let, type_voie), funs(toupper()))
 
 
 bdcom_internal <- function(adresse, rayon, commerce) {
