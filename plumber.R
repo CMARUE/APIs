@@ -5,7 +5,7 @@ library(memoise)
 library(tidyverse)
 PLU <- read_sf("./PLU/PLU_PSMV_PROTCOM.shp", stringsAsFactors = FALSE)
 
-fc <- cache_filesystem("~/.Rcache")
+fc <- cache_memory()
 m_geocode <- memoise(geocode, cache = fc)
 
 
