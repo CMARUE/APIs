@@ -1,3 +1,6 @@
+Sys.setenv(LANG = "fr")
+Sys.setlocale(locale = "fr_FR.UTF-8")
+# il a fallu autoriser cette locale sur le système : locale-gen fr_FR.UTF-8
 library(sf)
 library(banR)
 library(sp)
@@ -92,7 +95,8 @@ bdcom_internal <- function(adresse, rayon, commerce) {
     stringr::str_replace_all(" DE [LA ]*", " ") %>%
     stringr::str_replace_all(" DU ", " ") %>%
     stringr::str_replace_all(" DES ", " ") %>%
-    stringr::str_replace_all(" L'", " ")
+    stringr::str_replace_all(" L'", " ") %>% 
+    stringr::str_replace_all("PARIS 19", "") 
     
     
 tmp_df <- BDCOM %>% 
@@ -107,6 +111,11 @@ if (nrow(tmp_df) > 0) {
     arrange(desc(importance)) %>% 
     slice(1) %>% 
     select(latitude, longitude)
+  if (nrow(tmp_df) %in% 0) {
+    msg <- "Adresse inconnue par la BDCOM"
+#    res$status <- 400
+    return(list(error = jsonlite::unbox(msg)))
+  }
   coordinates(tmp_df) <- c("longitude", "latitude")
   proj4string(tmp_df) <- st_crs(4326)$proj4string
   tmp_df <- st_as_sf(tmp_df)
@@ -117,17 +126,17 @@ if (nrow(tmp_df) > 0) {
   
   commerce <- jsonlite::fromJSON(commerce)
   
-  res <- st_buffer(tmp_df, as.numeric(rayon)) %>%
+  output <- st_buffer(tmp_df, as.numeric(rayon)) %>%
     select(geometry) %>% 
     st_intersection(BDCOM) %>% 
     st_set_geometry(NULL) %>% 
     filter(codact %in% commerce) %>% 
     group_by(codact) %>% 
     summarise(n = n())
-  if (nrow(res) %in% 0) {
-    res <- data_frame(codact = commerce, n = 0)
+  if (nrow(output) %in% 0) {
+    output <- data_frame(codact = commerce, n = 0)
   }
-  return(res)
+  return(output)
 }
 
 m_bdcom_internal <- memoise(bdcom_internal)
